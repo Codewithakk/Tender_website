@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path'); // Import path module
 const connectDB = require('./utils/db.js');
 require('dotenv').config();
 
@@ -12,17 +13,24 @@ app.use(cors({
     methods: 'GET, POST, PUT, DELETE, PATCH, HEAD',
     credentials: true,
 }));
+
 app.use(express.json());
 
 const adminRoutes = require('./routes/adminRoutes.js');
 const userRoutes = require('./routes/users_route.js');
 const bidRoutes = require('./routes/bids_route.js');
-const bidsManagementRoutes=require('./routes/bidsManagementRoutes.js')
+const bidsManagementRoutes = require('./routes/bidsManagementRoutes.js');
 
 app.use('/api/admin', adminRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/bid', bidRoutes);
 app.use('/api/management', bidsManagementRoutes);
+
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
