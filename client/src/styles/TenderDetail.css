@@ -1,0 +1,35 @@
+.tender-detail {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .tender-detail h1 {
+    font-size: 24px;
+  }
+  
+  .tender-detail form {
+    margin: 20px 0;
+  }
+  
+  .tender-detail input {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .tender-detail button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tender-detail button:hover {
+    background-color: #0056b3;
+  }
+  
+  .notification {
+    color: red;
+    font-weight: bold;
+  }
+  

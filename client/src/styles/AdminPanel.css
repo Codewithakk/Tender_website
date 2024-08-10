@@ -1,0 +1,23 @@
+.admin-portal nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+.admin-portal nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-portal nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.admin-portal nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.admin-portal main {
+  padding: 20px;
+}

@@ -1,0 +1,54 @@
+.quotation-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .quotation-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .quotation-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quotation-form label {
+    margin-bottom: 10px;
+  }
+  
+  .quotation-form input {
+    padding: 8px;
+    margin-top: 4px;
+  }
+  
+  .quotation-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .quotation-form button[type="submit"] {
+    background-color: #4CAF50;
+  }
+  
+  .quotation-form button[type="button"] {
+    background-color: #f44336;
+  }
+  
+  .error-message {
+    color: #f44336;
+  }
+  
+  .success-message {
+    color: #4CAF50;
+  }
+  
